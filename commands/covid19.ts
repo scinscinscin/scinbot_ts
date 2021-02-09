@@ -3,10 +3,10 @@ const coronaAPI = 'https://coronavirus-tracker-api.herokuapp.com';
 
 const require_dir = require('require-dir');
 const helper = require_dir('./helper');
-const { color } = require('../config/main.json');
-const { red, green } = color;
+const { colors } = require('../config/main.json');
+const { red, green } = colors;
 
-async function covid19(args: string[], author: string, authorID: string){
+async function covid19(args: string[], authorID: string, author: string, channelID: string, channel: any, creator: any, bot: any){
     // Determine which API endpoint to use
     let endpoint: string;
     if (args.length === 0){
