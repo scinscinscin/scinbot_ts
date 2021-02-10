@@ -1,8 +1,4 @@
-interface response {
-    color: string,
-    title: string,
-    message: string
-}
+import { response } from './interfaces/response';                                                   // Import the response interface
 
 const require_dir = require('require-dir');
 const commands = require_dir('./commands');
