@@ -2,7 +2,7 @@ export {};
 const { colors } = require('../config/main.json');
 const green: string = colors.green;
 
-function about(args: string[], authorID: string, author: string, channelID: string, channel: any, creator: any, bot: any){
+function about(args: string[], authorID: string, author: string, channelID: string, channel: any, creator: any, bot: any, messageObject: any){
     let message: string;
     message =  "**";
     message += "Info: \n";

@@ -55,7 +55,7 @@ client.on('message', async (message) => {
     let authorID = message.author.id;                                                               // User ID of the author
     let author =  message.author.username;                                                          // Username of the author
     
-    let response: response = await commands[command](args, authorID, author, channelID, channel, creator, bot);                 // The response of the command
+    let response: response = await commands[command](args, authorID, author, channelID, channel, creator, bot, message);        // The response of the command
 
     if (response === undefined){
         response = { "color": red, "title": "Unknown error", "message": `**An internal error has occured**`};                   // Response if the command didn't return

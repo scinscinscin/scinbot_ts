@@ -6,7 +6,7 @@ const helper = require_dir('./helper');
 const { colors, prefix } = require('../config/main.json');
 const { red, green } = colors;
 
-async function covid19(args: string[], authorID: string, author: string, channelID: string, channel: any, creator: any, bot: any){
+async function covid19(args: string[], authorID: string, author: string, channelID: string, channel: any, creator: any, bot: any, messageObject: any){
     // Determine which API endpoint to use
     let endpoint: string;
     if (args.length === 0){

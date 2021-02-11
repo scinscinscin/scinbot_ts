@@ -8,7 +8,7 @@ const fs = require('fs');
 const { colors, prefix } = require('../config/main.json');
 const { green, red } = colors;
 
-async function checklog(args: string[], authorID: string, author: string, channelID: string, channel: any, creator: any, bot: any){
+async function checklog(args: string[], authorID: string, author: string, channelID: string, channel: any, creator: any, bot: any, messageObject: any){
     let detections: detections = JSON.parse(fs.readFileSync('./config/detections.json', 'utf8'));                   // Object containing all the detections
     let link: string = args.join("");
 

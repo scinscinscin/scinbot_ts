@@ -4,7 +4,7 @@ const fs = require('fs');
 const { colors, prefix } = require('../config/main.json');
 const { red, green } = colors;
 
-function bind(args: string[], authorID: string, author: string, channelID: string, channel: any, creator: any, bot: any){
+function bind(args: string[], authorID: string, author: string, channelID: string, channel: any, creator: any, bot: any, messageObject: any){
     const binds: Object = JSON.parse(fs.readFileSync(`./config/binds.json`, `utf8`));         // Object containing all detections
     let keys: string[] = Object.keys(binds);                                                  // List of keys
     let bind: string = args.join("").toLowerCase();                                           // Combine the passed in arguments and force it to lowercase
