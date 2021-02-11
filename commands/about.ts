@@ -17,3 +17,4 @@ function about(args: string[], authorID: string, author: string, channelID: stri
 }
 
 module.exports = about;
+module.exports.help = "Print information about scinbot_ts";

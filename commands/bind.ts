@@ -1,7 +1,7 @@
 export {};
 const fs = require('fs');
 
-const { colors } = require('../config/main.json');
+const { colors, prefix } = require('../config/main.json');
 const { red, green } = colors;
 
 function bind(args: string[], authorID: string, author: string, channelID: string, channel: any, creator: any, bot: any){
@@ -22,3 +22,4 @@ function bind(args: string[], authorID: string, author: string, channelID: strin
 }
 
 module.exports = bind;
+module.exports.help = "Get a bind. List binds using ``" + prefix + "bind list``";

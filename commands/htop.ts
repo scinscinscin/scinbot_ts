@@ -54,3 +54,4 @@ async function htop(){
 }
 
 module.exports = htop;
+module.exports.help = "Get system stats about the host";

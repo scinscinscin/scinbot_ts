@@ -3,7 +3,7 @@ const coronaAPI = 'https://coronavirus-tracker-api.herokuapp.com';
 
 const require_dir = require('require-dir');
 const helper = require_dir('./helper');
-const { colors } = require('../config/main.json');
+const { colors, prefix } = require('../config/main.json');
 const { red, green } = colors;
 
 async function covid19(args: string[], authorID: string, author: string, channelID: string, channel: any, creator: any, bot: any){
@@ -61,3 +61,4 @@ async function covid19(args: string[], authorID: string, author: string, channel
 }
 
 module.exports = covid19;
+module.exports.help = "Get COVID-19 information. Usage: ``" + prefix + "covid19 <country>``";

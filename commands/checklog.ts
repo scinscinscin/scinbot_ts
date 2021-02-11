@@ -5,7 +5,7 @@ const require_dir = require('require-dir');
 const helper = require_dir('./helper');
 const fs = require('fs');
 
-const { colors } = require('../config/main.json');
+const { colors, prefix } = require('../config/main.json');
 const { green, red } = colors;
 
 async function checklog(args: string[], authorID: string, author: string, channelID: string, channel: any, creator: any, bot: any){
@@ -92,3 +92,4 @@ async function checklog(args: string[], authorID: string, author: string, channe
 }
 
 module.exports = checklog;
+module.exports.help = "Scan a log. Usage:  ``" + prefix + "checklog <link>``";

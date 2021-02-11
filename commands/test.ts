@@ -18,3 +18,4 @@ function test(args: string[], authorID: string, author: string, channelID: strin
 }
 
 module.exports = test;
+module.exports.help = "This is a test command";
