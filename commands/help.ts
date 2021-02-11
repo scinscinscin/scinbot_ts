@@ -16,7 +16,7 @@ function help(){
         message += `${prefix}${workingCommand}: ${help}\n`
     }
 
-    message += `${prefix}help: Print this summary`
+    message += `${prefix}help: Print this summary`;
     message += `**`;
     
     return({"color": green, "title": "Help", "message": message});
