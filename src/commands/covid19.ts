@@ -56,7 +56,7 @@ async function covid19(
             title: "Worldwide COVID-19 statistics",
             message: `${message}`,
         };
-    } else if (args.length === 1) {
+    } else {
         let country: string = args[0]; // The country / country code
         let check: string = country.length == 2 ? "country_code" : "country"; // Determine to check against country name / country code
         country = check === "country_code" ? country.toUpperCase() : country; // Force the country to uppercase if it is a country code
