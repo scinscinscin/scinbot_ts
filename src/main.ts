@@ -39,43 +39,78 @@ client.once("ready", async () => {
     });
 });
 
-client.on("message", async (message) => {
-    if (!message.content.startsWith(prefix) || message.author.bot) {
-        return; // Disregard if it doesn't start with prefix / author is a bot
+client.on(
+    "message",
+    async (message): Promise<void> => {
+        if (!message.content.startsWith(prefix) || message.author.bot) {
+            return; // Disregard if it doesn't start with prefix / author is a bot
+        }
+
+        let channelID = message.channel.id; // Channel ID that the message was sent in
+        let channel = await client.channels.cache.get(channelID); // Channel that the message was sent in
+        let authorID = message.author.id; // User ID of the author
+        let author = message.author.username; // Username of the author
+
+        if (message.content === prefix) {
+            sendMsg(
+                {
+                    color: red,
+                    title: "You forgot to put in a command",
+                    message: "**Your message is just a prefix**",
+                },
+                author,
+                channel
+            );
+            return;
+        }
+
+        let args: string[] = message.content
+            .substring(prefix.length)
+            .split(" "); // Remove the prefix and split the message
+
+        args = args.filter(function (str) {
+            return /\S/.test(str); // Remove all elements that are just whitespace
+        });
+
+        let command: string = args.shift()!; // Remove the command from the words array and store it in command
+        if (!commandList.includes(command)) {
+            sendMsg(
+                {
+                    color: red,
+                    title: `${command} is not a command`,
+                    message:
+                        "**Use ``" +
+                        prefix +
+                        "help`` to get a list of all commands**",
+                },
+                author,
+                channel
+            );
+            return;
+        }
+
+        let response: response = await commands[command](
+            args,
+            authorID,
+            author,
+            channelID,
+            channel,
+            creator,
+            bot,
+            message
+        ); // The response of the command
+
+        if (response === undefined) {
+            response = {
+                color: red,
+                title: "Unknown error",
+                message: `**An internal error has occured**`,
+            }; // Response if the command didn't return
+        }
+
+        sendMsg(response, author, channel);
+        return;
     }
-
-    let args: string[] = message.content.substring(prefix.length).split(" "); // Remove the prefix and split the message
-    let command: string = args.shift()!; // Remove the command from the words array and store it in command
-
-    if (!commandList.includes(command)) {
-        return; // Break out of function if the command is not in the list
-    }
-
-    let channelID = message.channel.id; // Channel ID that the message was sent in
-    let channel = await client.channels.cache.get(channelID); // Channel that the message was sent in
-    let authorID = message.author.id; // User ID of the author
-    let author = message.author.username; // Username of the author
-
-    let response: response = await commands[command](
-        args,
-        authorID,
-        author,
-        channelID,
-        channel,
-        creator,
-        bot,
-        message
-    ); // The response of the command
-
-    if (response === undefined) {
-        response = {
-            color: red,
-            title: "Unknown error",
-            message: `**An internal error has occured**`,
-        }; // Response if the command didn't return
-    }
-
-    sendMsg(response, author, channel);
-});
+);
 
 client.login(token);
