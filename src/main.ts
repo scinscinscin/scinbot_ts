@@ -45,7 +45,7 @@ client.on("message", async (message) => {
     }
 
     let args: string[] = message.content.substring(prefix.length).split(" "); // Remove the prefix and split the message
-    let command: string = args.shift(); // Remove the command from the words array and store it in command
+    let command: string = args.shift()!; // Remove the command from the words array and store it in command
 
     if (!commandList.includes(command)) {
         return; // Break out of function if the command is not in the list
