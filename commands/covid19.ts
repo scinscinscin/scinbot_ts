@@ -1,6 +1,5 @@
 import { response } from "../interfaces/response";
 
-export {};
 const coronaAPI = "https://coronavirus-tracker-api.herokuapp.com";
 
 const require_dir = require("require-dir");

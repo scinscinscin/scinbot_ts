@@ -1,6 +1,5 @@
 import { response } from "../interfaces/response";
 
-export {};
 const require_dir = require("require-dir");
 const commands = require_dir("./");
 

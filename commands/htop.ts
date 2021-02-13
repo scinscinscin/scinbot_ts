@@ -1,6 +1,5 @@
 import { response } from "../interfaces/response";
 
-export {};
 const os = require("os");
 const osutils = require("node-os-utils");
 const cdd = require("check-disk-space");

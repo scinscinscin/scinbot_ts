@@ -1,6 +1,5 @@
 import { response } from "../interfaces/response";
 
-export {};
 //const fs = require('fs');
 //const commit = fs.readFileSync(`gitCommit`, {encoding:'utf8', flag:'r'});
 const { colors } = require("../config/main.json");

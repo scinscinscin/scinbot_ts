@@ -1,6 +1,5 @@
 import { response } from "../interfaces/response";
 
-export {};
 const fs = require("fs");
 
 const { colors, prefix } = require("../config/main.json");

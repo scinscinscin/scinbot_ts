@@ -1,4 +1,3 @@
-export {};
 import { detections, allFlags } from "../interfaces/checklog"; // Import the response interface
 import { response } from "../interfaces/response";
 
