@@ -1,3 +1,5 @@
+import { response } from "../interfaces/response";
+
 export {};
 const coronaAPI = "https://coronavirus-tracker-api.herokuapp.com";
 
@@ -15,7 +17,7 @@ async function covid19(
     creator: any,
     bot: any,
     messageObject: any
-) {
+): Promise<response> {
     // Determine which API endpoint to use
     let endpoint: string;
     if (args.length === 0) {

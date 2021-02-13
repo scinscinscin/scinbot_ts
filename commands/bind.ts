@@ -1,3 +1,5 @@
+import { response } from "../interfaces/response";
+
 export {};
 const fs = require("fs");
 
@@ -13,7 +15,7 @@ function bind(
     creator: any,
     bot: any,
     messageObject: any
-) {
+): response {
     const binds: Object = JSON.parse(
         fs.readFileSync(`./config/binds.json`, `utf8`)
     ); // Object containing all detections

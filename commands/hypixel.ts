@@ -1,3 +1,5 @@
+import { response } from "../interfaces/response";
+
 export {};
 const { colors } = require("../config/main.json");
 const { green, red } = colors;
@@ -14,7 +16,7 @@ async function hypixel(
     creator: any,
     bot: any,
     messageObject: any
-) {
+): Promise<response> {
     // Check amount of arguments passed
     if (args.length !== 1) {
         return {

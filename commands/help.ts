@@ -1,3 +1,5 @@
+import { response } from "../interfaces/response";
+
 export {};
 const require_dir = require("require-dir");
 const commands = require_dir("./");
@@ -5,7 +7,7 @@ const commands = require_dir("./");
 const { colors, prefix } = require("../config/main.json");
 const { green } = colors;
 
-function help() {
+function help(): response {
     const commandNames: string[] = Object.keys(commands); // List of commands
     let message: string = "**";
 

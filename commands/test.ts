@@ -1,3 +1,5 @@
+import { response } from "../interfaces/response";
+
 export {};
 //const fs = require('fs');
 //const commit = fs.readFileSync(`gitCommit`, {encoding:'utf8', flag:'r'});
@@ -13,7 +15,7 @@ function test(
     creator: any,
     bot: any,
     messageObject: any
-) {
+): response {
     let message: string;
     message = "**";
     message += "Info: \n";

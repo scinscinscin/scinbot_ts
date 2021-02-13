@@ -1,3 +1,5 @@
+import { response } from "../interfaces/response";
+
 export {};
 const os = require("os");
 const osutils = require("node-os-utils");
@@ -9,7 +11,7 @@ const helper = require_dir("./helper");
 const { drives, colors } = require("../config/main.json");
 const { green } = colors;
 
-async function htop() {
+async function htop(): Promise<response> {
     let title: string = "System Status for " + helper.getADate();
     let message: string = "";
 

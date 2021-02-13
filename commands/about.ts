@@ -1,3 +1,5 @@
+import { response } from "../interfaces/response";
+
 export {};
 const { colors } = require("../config/main.json");
 const green: string = colors.green;
@@ -11,7 +13,7 @@ function about(
     creator: any,
     bot: any,
     messageObject: any
-) {
+): response {
     let message: string;
     message = "**";
     message += "Info: \n";

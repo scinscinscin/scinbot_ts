@@ -1,5 +1,6 @@
 export {};
 import { detections, allFlags } from "../interfaces/checklog"; // Import the response interface
+import { response } from "../interfaces/response";
 
 const require_dir = require("require-dir");
 const helper = require_dir("./helper");
@@ -17,7 +18,7 @@ async function checklog(
     creator: any,
     bot: any,
     messageObject: any
-) {
+): Promise<response> {
     let detections: detections = JSON.parse(
         fs.readFileSync("./config/detections.json", "utf8")
     ); // Object containing all the detections
@@ -82,7 +83,7 @@ async function checklog(
         return {
             color: red,
             title: `Not Implemented`,
-            text: `Unix HijackThis has not been implemented yet`,
+            message: `Unix HijackThis has not been implemented yet`,
         };
     } else if (contents.includes("---- Minecraft Crash Report ----")) {
         allFlags = detections.mccr;
@@ -92,14 +93,14 @@ async function checklog(
         return {
             color: red,
             title: `Not Implemented`,
-            text: `DXDiag reports have not been implemented yet`,
+            message: `DXDiag reports have not been implemented yet`,
         };
     } else {
         type = "Unknown log file type";
         return {
             color: red,
             title: `Unknown log file type`,
-            text: `Unknown log file type`,
+            message: `Unknown log file type`,
         };
     }
 
