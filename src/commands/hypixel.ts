@@ -1,10 +1,10 @@
 import { response } from "../interfaces/response";
 
-const { colors } = require("../config/main.json");
+const { colors } = require("../../config/main.json");
 const { green, red } = colors;
 const require_dir = require("require-dir");
 const helper = require_dir("./helper");
-const { hypixelToken } = require("../config/token.json");
+const { hypixelToken } = require("../../config/token.json");
 
 async function hypixel(
     args: string[],

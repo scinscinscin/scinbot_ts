@@ -4,7 +4,7 @@ const coronaAPI = "https://coronavirus-tracker-api.herokuapp.com";
 
 const require_dir = require("require-dir");
 const helper = require_dir("./helper");
-const { colors, prefix } = require("../config/main.json");
+const { colors, prefix } = require("../../config/main.json");
 const { red, green } = colors;
 
 async function covid19(

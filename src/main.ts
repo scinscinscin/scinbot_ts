@@ -8,8 +8,8 @@ const helper = require_dir("./commands/helper");
 const Discord = require("discord.js");
 const client = new Discord.Client();
 
-const { token } = require("./config/token.json");
-const { prefix, colors } = require("./config/main.json");
+const { token } = require("../config/token.json");
+const { prefix, colors } = require("../config/main.json");
 const { red, green } = colors;
 
 function sendMsg(response: response, author: string, channel: any) {

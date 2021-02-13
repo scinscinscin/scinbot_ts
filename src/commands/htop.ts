@@ -7,7 +7,7 @@ const cdd = require("check-disk-space");
 const require_dir = require("require-dir");
 const helper = require_dir("./helper");
 
-const { drives, colors } = require("../config/main.json");
+const { drives, colors } = require("../../config/main.json");
 const { green } = colors;
 
 async function htop(): Promise<response> {

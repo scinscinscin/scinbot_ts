@@ -5,7 +5,7 @@ const require_dir = require("require-dir");
 const helper = require_dir("./helper");
 const fs = require("fs");
 
-const { colors, prefix } = require("../config/main.json");
+const { colors, prefix } = require("../../config/main.json");
 const { green, red } = colors;
 
 async function checklog(

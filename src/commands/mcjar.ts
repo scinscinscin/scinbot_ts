@@ -1,6 +1,6 @@
 import { response } from "../interfaces/response";
 
-const { colors } = require("../config/main.json");
+const { colors } = require("../../config/main.json");
 const { green, red } = colors;
 const require_dir = require("require-dir");
 const helper = require_dir("./helper");

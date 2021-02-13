@@ -1,6 +1,6 @@
 import { response } from "../interfaces/response";
 
-const { colors } = require("../config/main.json");
+const { colors } = require("../../config/main.json");
 const green: string = colors.green;
 
 function about(

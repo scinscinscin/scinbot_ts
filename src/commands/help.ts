@@ -3,7 +3,7 @@ import { response } from "../interfaces/response";
 const require_dir = require("require-dir");
 const commands = require_dir("./");
 
-const { colors, prefix } = require("../config/main.json");
+const { colors, prefix } = require("../../config/main.json");
 const { green } = colors;
 
 function help(): response {

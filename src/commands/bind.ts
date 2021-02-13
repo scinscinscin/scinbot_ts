@@ -2,7 +2,7 @@ import { response } from "../interfaces/response";
 
 const fs = require("fs");
 
-const { colors, prefix } = require("../config/main.json");
+const { colors, prefix } = require("../../config/main.json");
 const { red, green } = colors;
 
 function bind(

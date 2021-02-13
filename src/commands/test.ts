@@ -2,7 +2,7 @@ import { response } from "../interfaces/response";
 
 //const fs = require('fs');
 //const commit = fs.readFileSync(`gitCommit`, {encoding:'utf8', flag:'r'});
-const { colors } = require("../config/main.json");
+const { colors } = require("../../config/main.json");
 const green = colors.green;
 
 function test(
