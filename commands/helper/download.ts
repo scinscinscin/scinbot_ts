@@ -10,7 +10,7 @@ function download(link: string) {
                 resolve(res.data);
             },
             (error) => {
-                console.log(error);
+                //console.log(error);
                 resolve("error");
             }
         );
