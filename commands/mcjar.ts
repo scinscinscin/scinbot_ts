@@ -1,4 +1,3 @@
-import { version } from "typescript";
 import { response } from "../interfaces/response";
 
 const { colors } = require("../config/main.json");
@@ -71,7 +70,7 @@ const jarTypes: Object = {
             "```java -jar ./fabric-installer-" +
             latestBuild +
             '.jar client -mcversion "' +
-            version +
+            ver +
             '"\n```';
         message += "**";
         message += "Install it using the following command for a server: \n";
@@ -80,7 +79,7 @@ const jarTypes: Object = {
             "```java -jar ./fabric-installer-" +
             latestBuild +
             '.jar server -mcversion "' +
-            version +
+            ver +
             '" -downloadMinecraft```';
 
         return { color: green, title: `${ver}`, message: `${message}` };
