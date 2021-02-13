@@ -259,8 +259,8 @@ async function mcjar(
     }
 
     // Get jartype and version
-    let jarType: string = args.shift().toLowerCase();
-    let version: string = args.shift();
+    let jarType: string = args.shift()!.toLowerCase();
+    let version: string = args.shift()!;
 
     // Sub command handler
     if (!Object.keys(jarTypes).includes(jarType)) {
