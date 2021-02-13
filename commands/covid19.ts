@@ -26,7 +26,7 @@ async function covid19(
     } else {
         return {
             color: red,
-            title: `Too many arguments`,
+            title: `Incorrect amount of arguments`,
             message: `**This command only takes 1 argument**`,
         };
     }

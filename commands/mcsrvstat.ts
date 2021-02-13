@@ -18,7 +18,7 @@ async function mcsrvstat(
     if (args.length !== 1) {
         return {
             color: red,
-            title: "Too many arguments",
+            title: "Incorrect amount of arguments",
             message: "This command only takes in 1 argument.",
         };
     }
