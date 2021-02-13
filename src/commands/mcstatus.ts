@@ -37,7 +37,7 @@ async function mcstatus(
     // Handle domains
     for (let i = 0; i < services.length; i++) {
         let workingService = services[i]; // The domain being checked
-        let status: Boolean;
+        let status: Boolean = false;
 
         if (workingService === "session.minecraft.net") {
             let HTTPCode = await helper.getHTTPCode(`http://${workingService}`);
