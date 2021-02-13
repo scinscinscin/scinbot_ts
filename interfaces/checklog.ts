@@ -1,8 +1,8 @@
 export interface detections {
-    [x: string]: allFlags[]
+    [x: string]: allFlags[];
 }
 
 export interface allFlags {
-    flags: string[],
-    res: string
+    flags: string[];
+    res: string;
 }

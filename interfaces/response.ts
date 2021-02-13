@@ -1,5 +1,5 @@
 export interface response {
-    color: string,
-    title: string,
-    message: string
+    color: string;
+    title: string;
+    message: string;
 }

@@ -1,16 +1,19 @@
-const axios = require('axios');
+const axios = require("axios");
 
-function download(link: string){
-    var promise = new Promise(function(resolve, reject) {
+function download(link: string) {
+    var promise = new Promise(function (resolve, reject) {
         axios({
-            method: 'get',
-            url: link
-        }).then((res) => {
-            resolve(res.data);
-        }, (error) => {
-            console.log(error)
-            resolve("error")
-        });
+            method: "get",
+            url: link,
+        }).then(
+            (res) => {
+                resolve(res.data);
+            },
+            (error) => {
+                console.log(error);
+                resolve("error");
+            }
+        );
     });
     return promise;
 }
