@@ -1,0 +1,8 @@
+{
+    "prefix": "!@#",
+    "colors": {
+        "green": "#a4d05f",
+        "red": "#f48f97"
+    },
+    "drives": ["/"]
+}
