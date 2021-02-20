@@ -5,6 +5,7 @@
 	"main": "main.js",
 	"scripts": {
 		"watch": "tsc -w",
+		"build": "tsc",
 		"test": "jest",
 		"debug": "nodemon dist/main.js",
 		"start": "node dist/main.js"
