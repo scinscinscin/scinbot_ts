@@ -1,33 +1,25 @@
 import { response } from "../interfaces/response";
+import { Parameters } from "../interfaces/parameters";
 
 const { colors } = require("../../config/main.json");
 const green: string = colors.green;
 
-function about(
-    args: string[],
-    authorID: string,
-    author: string,
-    channelID: string,
-    channel: any,
-    creator: any,
-    bot: any,
-    messageObject: any
-): response {
-    let message: string;
-    message = "**";
-    message += "Info: \n";
-    message += `Discord bot in TypeScript \n\n`;
-    message += `Creator: ${creator.username}#${creator.discriminator} \n`;
-    message += `Creator ID: ${creator.id} \n`;
-    message += `Bot: ${bot.username}#${bot.discriminator} \n`;
-    message += `Bot ID: ${bot.id} \n`;
-    message += "**";
+function about(p: Parameters): response {
+	let message: string;
+	message = "**";
+	message += "Info: \n";
+	message += `Discord bot in TypeScript \n\n`;
+	message += `Creator: ${p.creator.username}#${p.creator.discriminator} \n`;
+	message += `Creator ID: ${p.creator.id} \n`;
+	message += `Bot: ${p.bot.username}#${p.bot.discriminator} \n`;
+	message += `Bot ID: ${p.bot.id} \n`;
+	message += "**";
 
-    return {
-        color: green,
-        title: `About ${bot.username}`,
-        message: `${message}`,
-    };
+	return {
+		color: green,
+		title: `About ${p.bot.username}`,
+		message: `${message}`,
+	};
 }
 
 module.exports = about;
