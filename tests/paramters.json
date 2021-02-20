@@ -1,0 +1,18 @@
+{
+	"args": "this is a generic list of arguments",
+	"authorID": "205911447186702336",
+	"author": "scinorandex",
+	"channelID": "764981968579461133",
+	"channel": {},
+	"creator": {
+		"username": "scinorandex",
+		"discriminator": 9710,
+		"id": "205911447186702336"
+	},
+	"bot": {
+		"username": "scinbot_ts",
+		"discriminator": 1145,
+		"id": "808374340973625363"
+	},
+	"messageObject": {}
+}
