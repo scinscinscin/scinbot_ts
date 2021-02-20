@@ -1,5 +1,5 @@
 {
-	"args": "this is a generic list of arguments",
+	"args": ["This", "is", "a", "generic", "list", "of", "arguments"],
 	"authorID": "205911447186702336",
 	"author": "scinorandex",
 	"channelID": "764981968579461133",
@@ -14,5 +14,7 @@
 		"discriminator": 1145,
 		"id": "808374340973625363"
 	},
-	"messageObject": {}
+	"messageObject": {
+		"createdTimestamp": 10000
+	}
 }
